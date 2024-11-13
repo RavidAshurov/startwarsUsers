@@ -207,6 +207,18 @@
           .modal-title {
             font-size: 1.6rem;
           }
+
+          .close-btn {
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+
+            &:active {
+              transform: scale(0.9);
+            }
+          }
         }
 
         .modal-body-slot {

@@ -46,48 +46,44 @@ export function UserModal({
           level={snackbarData.level}
         />
       )}
-      <BaseModal
-        title={user.name}
-        onCloseClick={onCloseClick}
-        modalBody={
-          <div className="user-modal-body">
-            <img
-              className="user-image"
-              src="https://picsum.photos/200"
-              alt={user.name + ' image'}
-            />
-            <div className="user-details">
-              <div>
-                <span className="field-title">Height (m): </span>
-                {Number(user.height) / 100}{' '}
-              </div>
-              <div>
-                <span className="field-title">Mass (kg): </span>
-                {user.mass}
-              </div>
-              <div>
-                <span className="field-title">Birth year: </span>
-                {user.birth_year}{' '}
-              </div>
-              <div>
-                <span className="field-title">Films count: </span>
-                {user.films?.length || 0}{' '}
-              </div>
-              {planet && (
-                <div>
-                  <span className="field-title">Home world details: </span>
-                  <ul>
-                    <li>name: {planet.name}</li>
-                    <li>terrain: {planet.terrain}</li>
-                    <li>climate: {planet.climate}</li>
-                    <li>population: {planet.population}</li>
-                  </ul>
-                </div>
-              )}
+      <BaseModal title={user.name} onCloseClick={onCloseClick}>
+        <div className="user-modal-body">
+          <img
+            className="user-image"
+            src="https://picsum.photos/200"
+            alt={user.name + ' image'}
+          />
+          <div className="user-details">
+            <div>
+              <span className="field-title">Height (m): </span>
+              {Number(user.height) / 100}{' '}
             </div>
+            <div>
+              <span className="field-title">Mass (kg): </span>
+              {user.mass}
+            </div>
+            <div>
+              <span className="field-title">Birth year: </span>
+              {user.birth_year}{' '}
+            </div>
+            <div>
+              <span className="field-title">Films count: </span>
+              {user.films?.length || 0}{' '}
+            </div>
+            {planet && (
+              <div>
+                <span className="field-title">Home world details: </span>
+                <ul>
+                  <li>name: {planet.name}</li>
+                  <li>terrain: {planet.terrain}</li>
+                  <li>climate: {planet.climate}</li>
+                  <li>population: {planet.population}</li>
+                </ul>
+              </div>
+            )}
           </div>
-        }
-      />
+        </div>
+      </BaseModal>
     </>
   )
 }

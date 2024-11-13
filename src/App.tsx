@@ -1,14 +1,3 @@
-/**
- * TODO:
- * 9. readme
- * 10. cleanup
- * 11. read about phrases from the doc
- * 12. tech design doc
- * 13. GPT the submit message
- * 14. upload to Git
- * 15. rename the app
- */
-
 import { useEffect, useState } from 'react'
 import './App.css'
 import { User } from './types/systemTypes'

@@ -1,10 +1,10 @@
 export function BaseModal({
   title,
-  modalBody,
+  children,
   onCloseClick,
 }: {
   title: String
-  modalBody: JSX.Element | JSX.Element[]
+  children: JSX.Element | JSX.Element[]
   onCloseClick: React.MouseEventHandler<HTMLDivElement>
 }) {
   return (
@@ -16,7 +16,7 @@ export function BaseModal({
             X
           </div>
         </div>
-        <div className="modal-body-slot">{modalBody}</div>
+        <div className="modal-body-slot">{children}</div>
       </div>
     </div>
   )
